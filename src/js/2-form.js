@@ -1,10 +1,26 @@
+const refs = {
+  form: document.querySelector('.feedback-form'),
+};
+
+refs.form.addEventListener('focus', addPlaceholder, true);
+
+function addPlaceholder(e) {
+  if (e.target.nodeName === 'INPUT' || e.target.nodeName === 'TEXTAREA') {
+    e.target.setAttribute('placeholder', 'Type area');
+  }
+}
+
+refs.form.addEventListener('blur', removePlaceholder, true);
+
+function removePlaceholder(e) {
+  if (e.target.nodeName === 'INPUT' || e.target.nodeName === 'TEXTAREA') {
+    e.target.removeAttribute('placeholder');
+  }
+}
+
 const formData = {
   email: '',
   message: '',
-};
-
-const refs = {
-  form: document.querySelector('.feedback-form'),
 };
 
 const STORAGE_KEY = 'feedback-form-state';
@@ -53,5 +69,3 @@ function getFromLs(value) {
     return data;
   }
 }
-
-refs.form.addEventListener('');

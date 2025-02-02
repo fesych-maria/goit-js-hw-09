@@ -25,3 +25,7 @@ ul {
 .gallery-item:hover {
   scale: 1.04;
 }
+
+.gallery-link {
+  color: #747bff;
+}

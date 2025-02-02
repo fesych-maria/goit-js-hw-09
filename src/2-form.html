@@ -9,37 +9,44 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
-      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a class="nav-link {=$highlight-act}" href="./1-gallery.html"
+                >Gallery</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link form-link {=$highlight-curr}"
+                href="./2-form.html"
+                >Form</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {=$highlight-curr}" href="./index.html"
+                >Go back</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <main>
       <div class="container">
-        <a class="back-link" href="./index.html">Go back</a>
-        <h1 class="main-title">Form</h1>
         <form class="feedback-form" autocomplete="off">
           <label>
             Email
-            <input
-              type="email"
-              name="email"
-              autofocus
-              placeholder="Type area"
-            />
+            <input type="email" name="email" autofocus />
           </label>
           <label>
             Message
-            <textarea
-              name="message"
-              rows="8"
-              placeholder="Type area"
-            ></textarea>
+            <textarea name="message" rows="8"></textarea>
           </label>
           <button type="submit">Submit</button>
         </form>
